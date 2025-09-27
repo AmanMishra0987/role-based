@@ -8,14 +8,12 @@ import {
   query, 
   orderBy, 
   onSnapshot, 
-  where,
   updateDoc,
   doc,
-  arrayUnion,
-  getDocs
+  arrayUnion
 } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { Challenge, ChallengeParticipant } from '@/types';
+import { Challenge } from '@/types';
 import { 
   Plus, 
   Calendar, 
@@ -23,7 +21,6 @@ import {
   Trophy, 
   Lock, 
   Globe,
-  Clock,
   Star,
   Target
 } from 'lucide-react';
@@ -212,7 +209,7 @@ export default function Challenges() {
             return (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => setActiveTab(tab.id as 'all' | 'joined' | 'created')}
                 className={`flex items-center py-2 px-1 border-b-2 font-medium text-sm ${
                   activeTab === tab.id
                     ? 'border-indigo-500 text-indigo-600'

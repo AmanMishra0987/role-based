@@ -6,13 +6,10 @@ import {
   collection, 
   addDoc, 
   query, 
-  orderBy, 
   onSnapshot, 
   where,
   getDocs,
-  limit,
-  doc,
-  updateDoc
+  limit
 } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { ChatMessage, FAQ } from '@/types';
@@ -204,9 +201,9 @@ export default function Chatbot({ isWidget = false, onClose }: ChatbotProps) {
   // Expose notification function for external use
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      (window as any).sendChallengeNotification = sendChallengeNotification;
+      (window as Window & { sendChallengeNotification?: typeof sendChallengeNotification }).sendChallengeNotification = sendChallengeNotification;
     }
-  }, [user]);
+  }, [user, sendChallengeNotification]);
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -275,7 +272,7 @@ export default function Chatbot({ isWidget = false, onClose }: ChatbotProps) {
         {messages.length === 0 && (
           <div className="text-center text-gray-500 py-8">
             <Bot className="h-12 w-12 mx-auto mb-4 text-gray-400" />
-            <p>Welcome! I'm here to help you with the platform.</p>
+            <p>Welcome! I&apos;m here to help you with the platform.</p>
             <p className="text-sm mt-2">Ask me about challenges, roles, or how to get started!</p>
           </div>
         )}

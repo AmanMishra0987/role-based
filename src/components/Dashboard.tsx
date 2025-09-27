@@ -12,7 +12,6 @@ import {
   LogOut, 
   MessageCircle, 
   Trophy,
-  Plus,
   Settings
 } from 'lucide-react';
 

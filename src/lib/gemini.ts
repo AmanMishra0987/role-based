@@ -10,7 +10,7 @@ export interface GeminiResponse {
 }
 
 export class GeminiService {
-  private model: any;
+  private model: ReturnType<typeof genAI.getGenerativeModel>;
 
   constructor() {
     this.model = genAI.getGenerativeModel({ model: 'gemini-pro' });

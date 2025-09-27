@@ -132,7 +132,7 @@ export default function FAQManagement() {
   if (!user || (user.role !== 'admin' && user.role !== 'moderator')) {
     return (
       <div className="p-6 text-center text-gray-500">
-        <p>You don't have permission to manage FAQs.</p>
+        <p>You don&apos;t have permission to manage FAQs.</p>
       </div>
     );
   }

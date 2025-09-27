@@ -48,7 +48,7 @@ NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id`;
                 <li>Go to <a href="https://console.firebase.google.com/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:text-indigo-500 inline-flex items-center">
                   Firebase Console <ExternalLink className="h-4 w-4 ml-1" />
                 </a></li>
-                <li>Click "Create a project" or select an existing project</li>
+                <li>Click &quot;Create a project&quot; or select an existing project</li>
                 <li>Follow the setup wizard to create your project</li>
               </ol>
             </div>
@@ -67,8 +67,8 @@ NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id`;
               <h2 className="text-lg font-semibold text-gray-900">Step 3: Set up Firestore Database</h2>
               <ol className="list-decimal list-inside space-y-2 text-gray-700">
                 <li>Go to <strong>Firestore Database</strong></li>
-                <li>Click "Create database"</li>
-                <li>Choose "Start in production mode"</li>
+                <li>Click &quot;Create database&quot;</li>
+                <li>Choose &quot;Start in production mode&quot;</li>
                 <li>Select a location for your database</li>
               </ol>
             </div>
@@ -77,9 +77,9 @@ NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id`;
               <h2 className="text-lg font-semibold text-gray-900">Step 4: Get Firebase Configuration</h2>
               <ol className="list-decimal list-inside space-y-2 text-gray-700">
                 <li>Go to <strong>Project Settings</strong> (gear icon)</li>
-                <li>Scroll down to "Your apps" section</li>
+                <li>Scroll down to &quot;Your apps&quot; section</li>
                 <li>Click the web app icon (<code className="bg-gray-100 px-1 rounded">&lt;/&gt;</code>)</li>
-                <li>Register your app with a name (e.g., "Role-Based App")</li>
+                <li>Register your app with a name (e.g., &quot;Role-Based App&quot;)</li>
                 <li>Copy the configuration values</li>
               </ol>
             </div>
