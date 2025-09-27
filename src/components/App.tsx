@@ -35,8 +35,8 @@ export default function App() {
       <div className="min-h-screen bg-gray-50">
         {authMode === 'login' ? <LoginForm /> : <SignupForm />}
         
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2">
-          <p className="text-sm text-gray-600">
+        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 px-4">
+          <p className="text-xs sm:text-sm text-gray-600 text-center">
             {authMode === 'login' ? "Don't have an account? " : "Already have an account? "}
             <button
               onClick={() => setAuthMode(authMode === 'login' ? 'signup' : 'login')}

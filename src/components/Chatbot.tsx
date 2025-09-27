@@ -218,16 +218,16 @@ export default function Chatbot({ isWidget = false, onClose }: ChatbotProps) {
       <div className="fixed bottom-4 right-4 z-50">
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition-colors"
+          className="bg-indigo-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-indigo-700 transition-colors"
         >
-          <MessageCircle className="h-6 w-6" />
+          <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
         </button>
       </div>
     );
   }
 
   const containerClasses = isWidget 
-    ? "fixed bottom-4 right-4 z-50 flex flex-col h-96 w-80 bg-white rounded-lg shadow-lg border"
+    ? "fixed bottom-4 right-4 z-50 flex flex-col h-80 sm:h-96 w-72 sm:w-80 bg-white rounded-lg shadow-lg border"
     : "flex flex-col h-full bg-white rounded-lg shadow";
 
   return (
@@ -283,7 +283,7 @@ export default function Chatbot({ isWidget = false, onClose }: ChatbotProps) {
             className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
           >
             <div
-              className={`flex items-start space-x-2 max-w-xs lg:max-w-md ${
+              className={`flex items-start space-x-2 max-w-xs sm:max-w-sm lg:max-w-md ${
                 message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''
               }`}
             >
